@@ -1,10 +1,9 @@
 django
-psycopg2
 dj-database-url
+django-heroku
+djangorestframework
+markdown
+django-filter
+pyyaml
 gunicorn
 whitenoise
-django-heroku
-pytz
-sqlparse
-pyyaml
-djangorestframework

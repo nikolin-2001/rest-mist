@@ -1,1 +1,1 @@
-web: gunicorn equery.wsgi --log-file -
+web: gunicorn Kursovaya.wsgi --log-file -

@@ -1,0 +1,1 @@
+web: gunicorn equery.wsgi --log-file -

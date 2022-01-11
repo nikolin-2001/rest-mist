@@ -1,0 +1,32 @@
+{% include "myapi/includes/saitbar.html" %}
+
+</head>
+<body>
+    <div class="body-ramki">
+        <h3 style="text-align: center">Покупка</h3>
+        <h6> Для дальнейшего оформления заказа - заполните, пожалуйста, нижеуказанные разделы.</h6>
+        <form method="post">{% csrf_token %}
+            <input type="hidden" value="{{ view.kwargs.product_id }}" name="product" />
+            <table>
+                <tr>
+                    <td><p>Введите свое имя: </p></td>
+                    <td><input type="text" name="person" /> </td>
+                </tr>
+                       <p>Введите номер телефона:
+                        <input  type="tel" class="tel" name="promo" placeholder="+7(___)___-__-__" /></p>
+                <tr>
+
+
+
+                    <td><p>Введите адрес доставки:</p></td>
+                    <td>
+                        <input type="text" name="address" />
+                    </td>
+                </tr>
+                <tr><td><input type="submit" value="Отправить" /> </td><td></td></tr>
+            </table>
+        </form>
+    </div>
+</body>
+</html>
+{% include "myapi/includes/end.html" %}

@@ -1,0 +1,51 @@
+{% include "myapi/includes/saitbar.html" %}
+
+<html xmlns="http://www.w3.org/1999/html">
+<body>
+<div class="v-cloak; body-ramki">
+    <h3 style="padding-left: 85px" align="center">Список ноутбуков</h3>
+  <div>
+    <div id="conteiner1">
+    <table >
+        {% for p in products %}
+        <div >
+        <style>
+            a {text-decoration: none;}
+        </style>
+        <tr class="preview-product">
+
+            <td><img src='{{ p.image }}' alt = '' width='512p' height='357' style="object-fit: cover" /></td>
+            <td >
+               <div style='text-align: center'; >
+                   <h2 style="color: #ff8d02 !important">
+                       <b>{{ p.price|add:' ₽' }}</b></h2>
+                   <h2>{{ p.name }}</h2></div>
+                   <div class="p-description" style="text-align: justify"><t>{{ p.description }}</t></div>
+                   <div class="p-razmetka">
+                       <t style='padding-left:35px'><i>Характеристики: </i></t>
+                       <br>Дисплей: {{ p.displei }};
+                           Процессор: {{ p.processor }} <br>
+                           Оперативная память: {{ p.operativka }};
+                           Накопитель: {{ p.nakopiteli }} <br>
+                           Вес ноутбука: {{ p.ves }} </p>
+                   </div>
+                </div>
+        <div style='padding-left:50px; text-align:justify'>
+             <div style="text-align: center"><button class="btn btn-outline-secondary">
+                 <a href="/buy/{{ p.id }}">Купить</a>
+             </button>
+                 </td>
+             </div>
+            </div>
+            </tr>
+
+        {% endfor %}
+    </table>
+  </div>
+  </div>
+    </div>
+{% include "myapi/includes/end2.html" %}
+{% include "myapi/includes/style.html" %}
+</body>
+</html>
+

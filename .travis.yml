@@ -13,5 +13,5 @@ deploy:
   api_key:
     secure: QVkTW5AxQd5AaGlhv5IR2eKeKgtRhddOY0skhpm+qxHPYzRMRE7PUS4ojwhNbg8/b994yZtEjYAwiilnPhCMu5a+LjZ4SQSoII2LeQDsULRYt5nKfMSyAyTV6IBQwwF3Pwq0y2zGKdKq6HOn1GYRfJhDRauMgh56cZBJVkT+SH3mrQSUXJOB3h7+4PWITaiWpU66QcEow++2emjfA6C3wFLoxPQJ/XQh2xS7fJMjvnAbzQhxGDIVfbS9EeRJU9e0OowsZQ2x5+Q372lnYvwWk+PV/v0OrWeaIKlqUrEH6e6UWmWdjBcx3Mv3kmWoAaiwvdbypp0el8ahwSD/yFbcGXep1FE0FBkSysfzjywtVwsD+aFTDzwbIUClpodABDx6K0X9nfI1Xdyzzm/RXzVxwSDMb69q7lBWZcWXm38OurAj5dXI4pdg5sQC4T/RapeuPryA7TrNfyw4xQCFFrEkKoxZKWpCIdPDnn1/kCMbvlFzsTNSzWg9Vl7+mrXbZKvkdnclJ0UyGIHZisvTSRZkahxg5jJaZochWbWuCegBjymoEQ5zkUZhnQJ77Ndc6yOb8JRoDFkVrsN8PwR3nJ9MKu+X4fszgcIffNhAbL6jHK9NhvhIhXViEd1o6UTz1VzdMSoWY8zqUNk/+7dtRT9Vwbd9qlZadobIkEN487VQSnc=
   app: kr-nikitin
-  run: python manage.py python manage.py migrate&& loaddata products.yaml
+  run: python manage.py migrate&& python manage.py loaddata products.yaml
   on: main
